@@ -69,3 +69,18 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Custom utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions for view mode changes */
+.view-transition {
+  transition: all 0.3s ease-in-out;
+}

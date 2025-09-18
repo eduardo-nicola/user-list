@@ -11,59 +11,53 @@ export const content = [
 
 export const theme = {
   screens: {
-    xl: { max: "1920px" },
-    // => @media (max-width: 1920px) { ... }
-
-    lg: { max: "1366px" },
-    // => @media (max-width: 1366px) { ... }
-
-    md: { max: "736px" },
-    // => @media (max-width: 736px) { ... }
-
-    sm: { max: "480px" },
-    // => @media (max-width: 480px) { ... }
+    '2xl': '1536px',
+    xl: '1280px',
+    lg: '1024px',
+    md: '768px',
+    sm: '640px',
   },
   container: {
     center: true,
+    padding: {
+      DEFAULT: '1rem',
+      sm: '2rem',
+      lg: '4rem',
+      xl: '5rem',
+      '2xl': '6rem',
+    },
   },
   extend: {
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
     },
     colors: {
-      "pure-black": "hsl(var(--pure-black))",
-      "pure-white": "hsl(var(--pure-white))",
-      "min-white": "hsl(var(--min-white))",
-
-      blue: {
-        lightest: "hsl(var(--blue-lightest))",
-        lighter: "hsl(var(--blue-lighter))",
-        DEFAULT: "hsl(var(--blue))",
-        darker: "hsl(var(--blue-darker))",
-        darkest: "hsl(var(--blue-darkest))",
-      },
-      green: {
-        lightest: "hsl(var(--green-lightest))",
-        lighter: "hsl(var(--green-lighter))",
-        DEFAULT: "hsl(var(--green))",
-        darker: "hsl(var(--green-darker))",
-        darkest: "hsl(var(--green-darkest))",
-      },
-      "mid-blue": {
-        lightest: "hsl(var(--mid-blue-lightest))",
-        lighter: "hsl(var(--mid-blue-lighter))",
-        DEFAULT: "hsl(var(--mid-blue))",
-        darker: "hsl(var(--mid-blue-darker))",
-        dark: "hsl(var(--mid-blue-dark))",
-        darkest: "hsl(var(--mid-blue-darkest))",
-      },
-      "grey-blue": {
-        lightest: "hsl(var(--grey-blue-lightest))",
-        lighter: "hsl(var(--grey-blue-lighter))",
-        DEFAULT: "hsl(var(--grey-blue))",
-        darker: "hsl(var(--grey-blue-darker))",
-        darkerest: "hsl(var(--grey-blue-darkerest))",
-      },
+      primary: {
+        50: '#eff6ff',
+        100: '#dbeafe',
+        200: '#bfdbfe',
+        300: '#93c5fd',
+        400: '#60a5fa',
+        500: '#3b82f6',
+        600: '#2563eb',
+        700: '#1d4ed8',
+        800: '#1e40af',
+        900: '#1e3a8a',
+      }
     },
+    animation: {
+      'fade-in': 'fadeIn 0.5s ease-in-out',
+      'slide-up': 'slideUp 0.3s ease-out',
+    },
+    keyframes: {
+      fadeIn: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
+      slideUp: {
+        '0%': { opacity: '0', transform: 'translateY(10px)' },
+        '100%': { opacity: '1', transform: 'translateY(0)' },
+      }
+    }
   },
 };

@@ -4,7 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.API_BASE_URL
+    }
+  },
+
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/tailwindcss", "@nuxt/image"],
 
   app: {
     head: {
